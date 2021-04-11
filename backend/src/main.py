@@ -1,26 +1,36 @@
-from .entities.entity import Session, engine, Base
-from .entities.sport_type import SportType
+from flask import Flask, jsonify, request
 
-# generate database schema
+from .entities.entity import Session, engine, Base
+from .entities.sport_type import SportType, SportTypeSchema
+
+app = Flask(__name__)
+
 Base.metadata.create_all(engine)
 
-# start session
-session = Session()
 
-# check for existing data
-types = session.query(SportType).all()
+@app.route('/sport-types')
+def get_sport_type():
+    session = Session()
+    sport_type_objects = session.query(SportType).all()
 
-if len(types) == 0:
-    # create and persist mock exam
-    python_type = SportType(1892732461, "Figure skating")
-    session.add(python_type)
-    session.commit()
+    schema = SportTypeSchema(many=True)
+    sport_types = schema.dump(sport_type_objects)
+
     session.close()
+    return jsonify(sport_types)
 
-    # reload exams
-    types = session.query(SportType).all()
 
-# show existing exams
-print('### Sport types:')
-for sportType in types:
-    print(f'({sportType.id}) {sportType.name}')
+@app.route('/sport-types', methods=['POST'])
+def add_sport_type():
+    new_sport_type = SportTypeSchema(only=('name'))\
+        .load(request.get_json())
+
+    sport_type = SportType(**new_sport_type.data, created_by="HTTP post request")
+
+    session = Session()
+    session.add(sport_type)
+    session.commit()
+
+    added_sport_type = SportTypeSchema().dump(sport_type).data
+    session.close()
+    return jsonify(added_sport_type), 201
