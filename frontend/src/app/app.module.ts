@@ -8,6 +8,7 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SportSectionsComponent } from './sport-sections/sport-sections.component';
+import {GoogleMapsModule} from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SportSectionsComponent } from './sport-sections/sport-sections.componen
     PerfectScrollbarModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

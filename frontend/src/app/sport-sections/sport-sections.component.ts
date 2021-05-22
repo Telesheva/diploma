@@ -19,6 +19,7 @@ export class SportSectionsComponent implements OnInit, OnDestroy {
 
   sportType: string;
   sportSections: Section[] = [];
+  googleMapOptions = {};
 
   constructor(private route: ActivatedRoute) {}
 
