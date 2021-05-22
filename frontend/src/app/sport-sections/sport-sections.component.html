@@ -1,5 +1,5 @@
 <div class="sport-types-list">
-  <h1 class="sport-types-list__title">{{ pageTitle }}</h1>
+  <h1 class="sport-types-list__title">{{ sportType }}</h1>
   <div class="sport-types-list__search">
     <div class="search-input__wrapper">
       <input id="search" type="text" class="search-input" placeholder="Що вас цікавить?"/>
@@ -13,13 +13,11 @@
   </div>
   <ul class="sports-list">
     <perfect-scrollbar class="scroll">
-      <li class="sports-list__item" *ngFor="let sport of availableSports">
-        <span>{{ sport.name }}</span>
+      <li class="sports-list__item" *ngFor="let section of sportSections">
+        <span>{{ section.name }}</span>
         <div class="sports-list__divider"></div>
-        <button class="btn btn--cat" [routerLink]="'/sections'" [queryParams]="{ sportType: sport.name }">
-          Переглянути доступні секції
-        </button>
       </li>
     </perfect-scrollbar>
   </ul>
 </div>
+

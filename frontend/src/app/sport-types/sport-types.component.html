@@ -5,7 +5,17 @@
   </select>
   <h1 class="sport-types__title">Який вид спорту вас цікавить?</h1>
   <div class="sport-types__links">
-    <div [routerLink]="['/sports', 'summer']" class="sport-types__link sport-types__link--orange">Літній</div>
-    <div [routerLink]="['/sports', 'winter']" class="sport-types__link  sport-types__link--blue">Зимовий</div>
+    <div
+      [routerLink]="'/sports'"
+      [queryParams]="{ type: 'summer' }"
+      class="sport-types__link sport-types__link--orange">
+      Літній
+    </div>
+    <div
+      [routerLink]="'/sports'"
+      [queryParams]="{ type: 'winter' }"
+      class="sport-types__link  sport-types__link--blue">
+      Зимовий
+    </div>
   </div>
 </div>

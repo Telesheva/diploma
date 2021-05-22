@@ -7,12 +7,14 @@ import { SportTypesListComponent } from './sport-types/sport-types-list/sport-ty
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SportSectionsComponent } from './sport-sections/sport-sections.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SportTypesComponent,
-    SportTypesListComponent
+    SportTypesListComponent,
+    SportSectionsComponent
   ],
   imports: [
     BrowserModule,

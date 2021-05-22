@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {SportTypesComponent} from './sport-types/sport-types.component';
 import {SportTypesListComponent} from './sport-types/sport-types-list/sport-types-list.component';
+import {SportSectionsComponent} from './sport-sections/sport-sections.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,12 @@ const routes: Routes = [
     component: SportTypesComponent,
   },
   {
-    path: 'sports/:type',
+    path: 'sports',
     component: SportTypesListComponent,
+  },
+  {
+    path: 'sections',
+    component: SportSectionsComponent,
   }
 ];
 
