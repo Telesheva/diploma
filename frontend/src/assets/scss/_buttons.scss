@@ -1,0 +1,13 @@
+.btn {
+  font-family: 'Montserrat', sans-serif, helvetica, arial;
+  height: 40px;
+  min-width: 100px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 15px;
+}

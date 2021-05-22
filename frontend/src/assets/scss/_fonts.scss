@@ -1,0 +1,10 @@
+@mixin font-face($font-family, $file-path) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@include font-face('Montserrat', '../../assets/fonts/Montserrat/Montserrat-Light');
+@include font-face('Montserrat-Bold', '../../assets/fonts/Montserrat/Montserrat-Bold');
+@include font-face('Montserrat-SemiBold', '../../assets/fonts/Montserrat/Montserrat-SemiBold');
