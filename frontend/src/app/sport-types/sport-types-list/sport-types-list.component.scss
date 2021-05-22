@@ -1,0 +1,40 @@
+.sport-types-list {
+  text-align: center;
+  width: 60vw;
+  margin: auto;
+
+  &__title {
+    font-family: 'Montserrat-SemiBold', sans-serif, helvetica, arial;
+  }
+}
+
+.sports-list {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 0;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  &__divider {
+    border-bottom: 1px solid;
+    width: 50%;
+    margin: 8px 0 15px 0;
+  }
+}
+
+.scroll {
+  max-height: 75vh;
+}
+
+:host::ng-deep {
+  .ps {
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+  }
+}

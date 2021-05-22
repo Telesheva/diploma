@@ -1,13 +1,11 @@
 <div class="sport-types">
   <select class="sport-types__select">
     <option value="" disabled selected>Ваше місто</option>
-    <option>Харків</option>
-    <option>Київ</option>
-    <option>Львів</option>
+    <option *ngFor="let city of availableCities">{{ city.name }}</option>
   </select>
   <h1 class="sport-types__title">Який вид спорту вас цікавить?</h1>
   <div class="sport-types__links">
-    <div [routerLink]="'/sports'" class="sport-types__link sport-types__link--orange">Літній</div>
-    <div [routerLink]="'/sports'" class="sport-types__link  sport-types__link--blue">Зимовий</div>
+    <div [routerLink]="['/sports', 'summer']" class="sport-types__link sport-types__link--orange">Літній</div>
+    <div [routerLink]="['/sports', 'winter']" class="sport-types__link  sport-types__link--blue">Зимовий</div>
   </div>
 </div>
