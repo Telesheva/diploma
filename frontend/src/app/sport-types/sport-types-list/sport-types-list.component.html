@@ -14,10 +14,13 @@
   <ul class="sports-list">
     <perfect-scrollbar class="scroll">
       <li class="sports-list__item" *ngFor="let sport of availableSports">
-        <span>{{ sport.name }}</span>
+        <span class="sport-name">{{ sport.name }}</span>
         <div class="sports-list__divider"></div>
         <button class="btn btn--cat" [routerLink]="'/sections'" [queryParams]="{ sportType: sport.name }">
           Переглянути доступні секції
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17 11.219H9.015l2.673-2.673-.977-.977-4.34 4.34 4.388 4.388.977-.977-2.721-2.721H17z"/>
+          </svg>
         </button>
       </li>
     </perfect-scrollbar>

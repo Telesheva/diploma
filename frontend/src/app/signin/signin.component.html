@@ -1,0 +1,31 @@
+<div class="back-home">
+  <button class="btn" [routerLink]="'/'">
+    <span>На головну</span>
+    <mat-icon aria-hidden="false">home</mat-icon>
+  </button>
+</div>
+<div class="form-wrapper">
+  <form class="form">
+    <div class="form__column">
+      <div class="form__content">
+        <h2 class="form__title">Реєстрація</h2>
+        <label for="name-input" class="base-field__label">Ім'я</label>
+        <input id="name-input" type="text" class="base-field" placeholder="Введіть ваше ім'я"/>
+
+        <label for="email-input" class="base-field__label">Електронна пошта</label>
+        <input id="email-input" type="email" class="base-field" placeholder="Введіть вашу електронну пошту"/>
+
+        <label for="password-input" class="base-field__label">Пароль</label>
+        <input id="password-input" type="password" class="base-field" placeholder="Введіть ваш пароль"/>
+
+        <label for="password-repeat-input" class="base-field__label">Повторіть пароль</label>
+        <input id="password-repeat-input" type="password" class="base-field" placeholder="Введіть ваш пароль ще раз"/>
+      </div>
+      <div class="form__footer">
+        <button class="btn btn--cat">Зареєструватися</button>
+        <span class="registration-note">Вже маєте акаунт? <a [routerLink]="'/login'">Увійдіть</a></span>
+      </div>
+    </div>
+    <div class="form__column" style="background-image: url('assets/images/signin-bg.JPG')"></div>
+  </form>
+</div>

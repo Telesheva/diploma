@@ -14,11 +14,28 @@
   <ul class="sports-list">
     <perfect-scrollbar class="scroll">
       <li class="sports-list__item" *ngFor="let section of sportSections">
-        <span>{{ section.name }}</span>
+        <google-map height="230px" width="965px" [options]="googleMapOptions"></google-map>
+        <div class="sports-list__item--header">
+          <span>{{ section.name }}</span>
+          <button class="btn btn--cat">
+            Детальніше
+          </button>
+        </div>
         <div class="sports-list__divider"></div>
+        <div class="sports-list__item--content">
+          <div class="sports-list__location">
+            <mat-icon aria-hidden="false" class="location-icon">map</mat-icon>
+            <span class="location">{{ section.location }}</span>
+          </div>
+          <ul class="sports-list__contacts">
+            <li *ngFor="let contact of section.contacts">
+              <mat-icon aria-hidden="false">phone</mat-icon>
+              <span class="phone-number">{{ contact.phone }} {{ contact.name }}</span>
+            </li>
+          </ul>
+        </div>
       </li>
     </perfect-scrollbar>
   </ul>
-  <google-map height="250px" width="250px" [options]="googleMapOptions"></google-map>
 </div>
 

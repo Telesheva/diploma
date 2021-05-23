@@ -9,13 +9,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SportSectionsComponent } from './sport-sections/sport-sections.component';
 import {GoogleMapsModule} from '@angular/google-maps';
+import {MaterialModule} from './material.module';
+import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SportTypesComponent,
     SportTypesListComponent,
-    SportSectionsComponent
+    SportSectionsComponent,
+    LoginComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,7 @@ import {GoogleMapsModule} from '@angular/google-maps';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     GoogleMapsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

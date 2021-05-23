@@ -3,10 +3,15 @@ import {takeUntil} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
 import {Subject} from 'rxjs';
 
+interface Contact {
+  phone: string;
+  name?: string;
+}
+
 interface Section {
   name: string;
   location: string;
-  contacts: string[];
+  contacts: Contact[];
 }
 
 @Component({
@@ -40,17 +45,17 @@ export class SportSectionsComponent implements OnInit, OnDestroy {
       {
         name: 'Section1',
         location: 'Location1',
-        contacts: ['096-543-34-34', '050-432-11-12']
+        contacts: [{ phone: '096-543-34-34', name: 'Julia' }, { phone: '050-432-11-12', name: 'Artem' }]
       },
       {
         name: 'Section2',
         location: 'Location2',
-        contacts: ['097-543-34-32']
+        contacts: [{ phone: '097-543-34-32' }]
       },
       {
         name: 'Section3',
         location: 'Location3',
-        contacts: ['050-432-11-12']
+        contacts: [{ phone: '050-432-11-12', name: 'Name' }]
       }
     ];
   }
