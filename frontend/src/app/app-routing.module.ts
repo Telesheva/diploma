@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {SportTypesComponent} from './sport-types/sport-types.component';
-import {SportTypesListComponent} from './sport-types/sport-types-list/sport-types-list.component';
-import {SportSectionsComponent} from './sport-sections/sport-sections.component';
-import {LoginComponent} from './login/login.component';
-import {SigninComponent} from './signin/signin.component';
-import {AddSportTypeComponent} from './admin-pages/add-sport-type/add-sport-type.component';
-import {SportSectionFormComponent} from './admin-pages/sport-section-form/sport-section-form.component';
+import {SportTypesComponent} from './components/sport-types/sport-types.component';
+import {SportTypesListComponent} from './components/sport-types/sport-types-list/sport-types-list.component';
+import {SportSectionsComponent} from './components/sport-sections/sport-sections.component';
+import {LoginComponent} from './components/login/login.component';
+import {SigninComponent} from './components/signin/signin.component';
+import {AddSportTypeComponent} from './components/admin-pages/add-sport-type/add-sport-type.component';
+import {SportSectionFormComponent} from './components/admin-pages/sport-section-form/sport-section-form.component';
 
 const routes: Routes = [
   {
