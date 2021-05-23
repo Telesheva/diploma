@@ -1,0 +1,21 @@
+.form__title {
+  margin: 15px 0 45px 0;
+}
+
+.form__column:first-child {
+  .base-field:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__footer {
+  align-items: flex-end;
+}
+
+.sport-types__select {
+  margin: 10px 0 14px 0;
+}
+
+.form__footer .btn {
+  width: 200px;
+}

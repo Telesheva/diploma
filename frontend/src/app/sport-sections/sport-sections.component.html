@@ -26,6 +26,7 @@
           <div class="sports-list__location">
             <mat-icon aria-hidden="false" class="location-icon">map</mat-icon>
             <span class="location">{{ section.location }}</span>
+            <strong class="location"> ({{ section.distance }} від вас)</strong>
           </div>
           <ul class="sports-list__contacts">
             <li *ngFor="let contact of section.contacts">

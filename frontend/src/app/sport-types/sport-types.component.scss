@@ -11,20 +11,6 @@
     font-family: 'Montserrat-SemiBold', sans-serif, helvetica, arial;
   }
 
-  &__select {
-    font-family: 'Montserrat', sans-serif, helvetica, arial;
-    border-radius: 0;
-    border-color: #000;
-    padding: 8px 16px 8px 8px;
-    font-size: 18px;
-    width: 220px;
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
   &__links {
     display: flex;
     text-align: center;

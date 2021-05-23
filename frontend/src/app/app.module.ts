@@ -12,6 +12,8 @@ import {GoogleMapsModule} from '@angular/google-maps';
 import {MaterialModule} from './material.module';
 import { LoginComponent } from './login/login.component';
 import { SigninComponent } from './signin/signin.component';
+import { AddSportTypeComponent } from './admin-pages/add-sport-type/add-sport-type.component';
+import { SportSectionFormComponent } from './admin-pages/sport-section-form/sport-section-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SigninComponent } from './signin/signin.component';
     SportTypesListComponent,
     SportSectionsComponent,
     LoginComponent,
-    SigninComponent
+    SigninComponent,
+    AddSportTypeComponent,
+    SportSectionFormComponent
   ],
   imports: [
     BrowserModule,

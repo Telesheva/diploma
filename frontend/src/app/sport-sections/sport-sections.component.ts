@@ -11,6 +11,7 @@ interface Contact {
 interface Section {
   name: string;
   location: string;
+  distance: string;
   contacts: Contact[];
 }
 
@@ -43,18 +44,21 @@ export class SportSectionsComponent implements OnInit, OnDestroy {
   fetchSportSections(): void {
     this.sportSections = [
       {
-        name: 'Section1',
-        location: 'Location1',
+        name: 'Секція 1',
+        location: 'Локація ',
+        distance: '500 м',
         contacts: [{ phone: '096-543-34-34', name: 'Julia' }, { phone: '050-432-11-12', name: 'Artem' }]
       },
       {
-        name: 'Section2',
-        location: 'Location2',
+        name: 'Секція 2',
+        location: 'Локація 2',
+        distance: '1 км',
         contacts: [{ phone: '097-543-34-32' }]
       },
       {
-        name: 'Section3',
-        location: 'Location3',
+        name: 'Секція 3',
+        location: 'Локація 3',
+        distance: '1.4 км',
         contacts: [{ phone: '050-432-11-12', name: 'Name' }]
       }
     ];

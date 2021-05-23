@@ -1,0 +1,31 @@
+<div class="back-home">
+  <button class="btn" [routerLink]="'/'">
+    <span>На головну</span>
+    <mat-icon aria-hidden="false">home</mat-icon>
+  </button>
+</div>
+<div class="form-wrapper">
+  <form class="form">
+    <div class="form__column">
+      <div class="form__content">
+        <h2 class="form__title">Додавання нового виду спорту</h2>
+        <label for="name-input" class="base-field__label">Назва виду спорту</label>
+        <input id="name-input" type="text" class="base-field" placeholder="Введіть назву"/>
+
+        <div class="custom-radio">
+          <input id="summer-type-radio" type="radio" />
+          <label for="summer-type-radio">Літній</label>
+        </div>
+
+        <div class="custom-radio">
+          <input id="winter-type-radio" type="radio" />
+          <label for="winter-type-radio">Зимовий</label>
+        </div>
+      </div>
+      <div class="form__footer">
+        <button class="btn btn--cat">Додати</button>
+      </div>
+    </div>
+    <div class="form__column" style="background-image: url('assets/images/add-sport-bg.jpg')"></div>
+  </form>
+</div>
